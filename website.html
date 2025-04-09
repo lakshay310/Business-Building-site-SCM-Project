@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HARJAS CONSTRUCTIONS</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f8f8f8;
+    }
+
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #333;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1581090700227-2fe9cdddb5e7') center/cover no-repeat;
+      height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+
+    .section {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .service {
+      background: white;
+      width: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    .service img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .service-content {
+      padding: 1rem;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin-top: 2rem;
+    }
+
+    @media(max-width: 768px) {
+      .services {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>HARJAS CONSTRUCTIONS</h1>
+    <p>Building Dreams, One Brick at a Time</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="hero">
+    Professional Construction & Renovation
+  </div>
+
+  <div class="section" id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service">
+        <img src="https://images.unsplash.com/photo-1599427303058-f04b682b1b4e" alt="Residential Construction">
+        <div class="service-content">
+          <h3>Residential Projects</h3>
+          <p>Custom homes, villas, and apartments designed for modern living.</p>
+        </div>
+      </div>
+      <div class="service">
+        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be" alt="Commercial Construction">
+        <div class="service-content">
+          <h3>Commercial Buildings</h3>
+          <p>Offices, retail outlets, and large-scale corporate construction projects.</p>
+        </div>
+      </div>
+      <div class="service">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Renovation Work">
+        <div class="service-content">
+          <h3>Renovation & Remodeling</h3>
+          <p>Revamp your space with style—interior and exterior makeovers.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Email:</strong> contact@harjasconstructions.com</p>
+    <p><strong>Phone:</strong> +91 98765 43210</p>
+    <p><strong>Address:</strong> SCO 45, Sector 21, Chandigarh</p>
+  </div>
+
+  <footer>
+    &copy; 2025 HARJAS CONSTRUCTIONS | Designed with 💼 & 🧱
+  </footer>
+
+</body>
+</html>
