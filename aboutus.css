@@ -8,10 +8,12 @@ body {
 }
 
 header {
-    background-color: #007bff;
+    display: flex;
+    justify-content: space-between; /* Align heading left, nav to the right */
+    align-items: center; /* Center vertically */
+    background-color: #0f172a;
     color: #fff;
-    padding: 15px 0;
-    text-align: center;
+    padding: 15px 20px; /* Added padding to create space */
 }
 
 header .logo h1 {
@@ -20,7 +22,6 @@ header .logo h1 {
 
 .nav-links {
     display: flex;
-    justify-content: center;
     list-style: none;
     padding: 0;
 }
@@ -32,6 +33,11 @@ header .logo h1 {
 .nav-links a {
     text-decoration: none;
     color: #fff;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.nav-links a:hover {
+    color: #ffcc00; /* Change to yellow on hover */
 }
 
 section.about {
@@ -44,14 +50,14 @@ section.about {
 }
 
 section.about h2 {
-    color: #007bff;
+    color: #0f172a;
     text-align: center;
 }
 
 footer {
     text-align: center;
     padding: 10px 0;
-    background-color: #007bff;
+    background-color: #0f172a;
     color: #fff;
     margin-top: 20px;
 }
