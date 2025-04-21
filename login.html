@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BuildIt Construction | Login</title>
+  <link rel="stylesheet" href="home.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #f4f4f4;
+      font-family: 'Bebas Neue', sans-serif;
+    }
+    .login-container {
+      max-width: 350px;
+      margin: 60px auto;
+      background: #fff;
+      padding: 2rem 2.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      color: #2d3a4b;
+    }
+    .login-container label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #333;
+      font-size: 1.05rem;
+    }
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 1.2rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .login-container button {
+      width: 100%;
+      padding: 0.7rem;
+      background: #2d3a4b;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .login-container button:hover {
+      background: #1b2430;
+    }
+    .login-container .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 1.2rem;
+      color: #2d3a4b;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    .login-container .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form>
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required />
+
+      <button type="submit">Login</button>
+    </form>
+    <a class="back-link" href="index.html">← Back to Home</a>
+  </div>
+</body>
+</html>
