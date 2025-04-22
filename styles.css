@@ -82,6 +82,10 @@ body {
     background-color: #d1d5db;
 }
 
+.btn-tertiary:hover {
+    background-color: #eaeaea;
+}
+
 .intro-image {
     flex: 1;
     background: #e5e7eb;
