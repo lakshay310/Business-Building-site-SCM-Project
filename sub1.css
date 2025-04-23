@@ -1,17 +1,92 @@
-.service-card, .service-card:link, .service-card:visited {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    background: #fff;
-    border-radius: 18px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    padding: 0 0 18px 0;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background: #f0f4f8;
+    color: #333;
+  }
+  
+  header {
+    background: #0e4a7b;
+    color: white;
+    padding: 20px;
     text-align: center;
-    transition: box-shadow 0.2s;
+  }
+  
+  header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .properties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .property-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .property-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .property-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .property-info {
+    padding: 20px;
+  }
+  
+  .property-info h2 {
+    color: #0e4a7b;
+    margin-bottom: 10px;
+  }
+  
+  .property-info ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 15px 0;
+  }
+  
+  .property-info li {
+    margin-bottom: 6px;
+  }
+  
+  button {
+    background: #0e4a7b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 15px;
     cursor: pointer;
   }
   
-  .service-card:hover {
-    box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+  button:hover {
+    background: #08355b;
+  }
+  
+  footer {
+    background: #ddd;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
   }
   
