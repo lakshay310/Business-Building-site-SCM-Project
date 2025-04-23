@@ -27,14 +27,14 @@
           <li>🔒 Quality assurance</li>
           <li>🛠 Turnkey solutions</li>
         </ul>
-        <button>Request a Quote</button>
+        <button id="openModal" class="quote-btn">Request a Quote</button>
       </div>
     </div>
   </main>
   <footer>
     <p>&copy; 2025 BuildIt Construction. All rights reserved.</p>
   </footer>
-  <!-- Request Quote Modal -->
+    <!-- Request Quote Modal -->
 <div id="quoteModal" class="modal">
     <div class="modal-content">
       <span class="close" id="closeModal">&times;</span>
@@ -53,6 +53,29 @@
       </form>
     </div>
   </div>
+  <script>
+    // Get modal elements
+    var modal = document.getElementById("quoteModal");
+    var btn = document.getElementById("openModal");
+    var span = document.getElementById("closeModal");
+  
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+  
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+  
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
   
 </body>
 </html>
