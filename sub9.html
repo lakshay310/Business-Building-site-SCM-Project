@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Consultation | BuildIt Construction</title>
   <link rel="stylesheet" href="sub1.css" />
+  <style>
+    .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4);}
+    .modal-content { background-color: #fff; margin: 10% auto; padding: 30px 20px 20px 20px; border: 1px solid #888; width: 90%; max-width: 400px; border-radius: 8px; position: relative; box-shadow: 0 4px 16px rgba(0,0,0,0.2);}
+    .close { color: #aaa; position: absolute; top: 10px; right: 20px; font-size: 28px; font-weight: bold; cursor: pointer; transition: color 0.2s;}
+    .close:hover, .close:focus { color: #333; text-decoration: none; cursor: pointer;}
+    .quote-btn { background: #1976d2; color: #fff; border: none; padding: 10px 18px; font-size: 1rem; border-radius: 5px; cursor: pointer; transition: background 0.2s;}
+    .quote-btn:hover { background: #125ea6;}
+    .submit-btn { background: #388e3c; color: #fff; border: none; padding: 8px 16px; font-size: 1rem; border-radius: 5px; cursor: pointer; margin-top: 10px; transition: background 0.2s;}
+    .submit-btn:hover { background: #266a28;}
+    label { display: block; margin-top: 12px; margin-bottom: 4px; font-weight: bold;}
+    input, textarea { width: 100%; padding: 7px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 10px;}
+  </style>
 </head>
 <body>
   <header>
@@ -27,12 +39,40 @@
           <li>💡 Cost estimation</li>
           <li>🗂 Regulatory compliance</li>
         </ul>
-        <button>Request a Quote</button>
+        <button id="openModal" class="quote-btn" type="button">Request a Quote</button>
       </div>
     </div>
   </main>
   <footer>
     <p>&copy; 2025 BuildIt Construction. All rights reserved.</p>
   </footer>
+  <div id="quoteModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <span class="close" id="closeModal" role="button" tabindex="0" aria-label="Close">&times;</span>
+      <h2 id="modalTitle">Request a Quote</h2>
+      <form action="#" method="post" autocomplete="off">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="details">Project Details:</label>
+        <textarea id="details" name="details" rows="4" required></textarea>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+  <script>
+    var modal = document.getElementById("quoteModal");
+    var btn = document.getElementById("openModal");
+    var span = document.getElementById("closeModal");
+    btn.onclick = function() { modal.style.display = "block"; }
+    span.onclick = function() { modal.style.display = "none"; }
+    window.onclick = function(event) { if (event.target == modal) { modal.style.display = "none"; } }
+    span.addEventListener('keydown', function(event) {
+      if (event.key === "Enter" || event.key === " " || event.key === "Escape") {
+        modal.style.display = "none";
+      }
+    });
+  </script>
 </body>
 </html>
