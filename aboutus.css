@@ -1,44 +1,59 @@
 body {
-    font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     background-color: #f4f4f9;
     color: #333;
 }
-
+/* Header */
 header {
-    display: flex;
-    justify-content: space-between; /* Align heading left, nav to the right */
-    align-items: center; /* Center vertically */
     background-color: #0f172a;
-    color: #fff;
-    padding: 15px 20px; /* Added padding to create space */
-}
-
-header .logo h1 {
-    margin: 0;
-}
-
-.nav-links {
+    color: white;
+    padding: 20px 40px;
     display: flex;
-    list-style: none;
-    padding: 0;
-}
-
-.nav-links li {
-    margin: 0 10px;
-}
-
-.nav-links a {
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  
+  .logo h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  
+  .logo h1 a {
+    color: inherit;
     text-decoration: none;
-    color: #fff;
-    transition: color 0.3s ease; /* Smooth transition for color change */
-}
-
-.nav-links a:hover {
-    color: #ffcc00; /* Change to yellow on hover */
-}
+    transition: color 0.2s;
+  }
+  
+  .logo h1 a:hover {
+    color: #facc15;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 6px 12px;
+    border-radius: 4px;
+  }
+  
+  .nav-links li a.active,
+  .nav-links li a:hover {
+    color: #0f172a;
+    background: #facc15;
+  }
 
 section.about {
     padding: 20px;

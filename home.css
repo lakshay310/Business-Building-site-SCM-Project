@@ -12,40 +12,53 @@
   }
   
   /* Header */
-  header {
-    background-color: #1e293b;
-    color: white;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo h1 {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 2.2rem;
-    letter-spacing: 1px;
-    color: #fff;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-  }
-  
-  .nav-links li a {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-links li a.active,
-  .nav-links li a:hover {
-    color: #facc15;
-  }
-  
+header {
+  background-color: #0f172a;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.logo h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.logo h1 a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.logo h1 a:hover {
+  color: #facc15;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.nav-links li a.active,
+.nav-links li a:hover {
+  color: #0f172a;
+  background: #facc15;
+}
   /* Hero Section */
   .hero {
     background: url('https://images.unsplash.com/photo-1599423300746-b62533397364') center/cover no-repeat;
