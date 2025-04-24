@@ -1,178 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
 body {
   background: #f0f4f8;
+  color: #333;
   min-height: 100vh;
-  margin: 0;
   display: flex;
   flex-direction: column;
 }
 
-/* Navbar */
-.navbar {
-  background: #1a2632;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 40px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+/* Header */
+header {
+  background: #0e4a7b;
+  color: white;
+  padding: 20px 0 16px 0;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
 }
 
-.logo {
-  font-family: 'Bebas Neue', Arial, sans-serif;
-  font-size: 2rem;
-  color: #fff;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 28px;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar ul li a {
-  color: #fff;
+header nav a {
+  color: white;
+  margin: 0 15px;
   text-decoration: none;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  font-size: 1.1rem;
   font-weight: 500;
-  padding: 8px 18px;
-  border-radius: 8px;
-  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
-  display: block;
+  font-size: 1.08rem;
+  letter-spacing: 0.3px;
+  transition: color 0.2s;
 }
 
-.navbar ul li a.active,
-.navbar ul li a:hover {
-  background: #facc15;
-  color: #1a2632;
-  box-shadow: 0 2px 8px rgba(250,204,21,0.10);
+header nav a:hover {
+  color: #facc15;
 }
 
-/* Service Card */
-main {
+/* Responsive Grid */
+.properties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px 40px 20px;
   flex: 1 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 40px 0 0 0;
 }
 
-.service-card {
+.property-card {
   background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 6px 32px rgba(0,0,0,0.09);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.09);
+  transition: transform 0.18s, box-shadow 0.18s;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  max-width: 800px;
-  width: 100%;
-  padding: 36px 32px;
-  gap: 32px;
+  flex-direction: column;
+  align-items: center;
 }
 
-.service-card img {
-  width: 220px;
-  height: 160px;
+.property-card:hover {
+  transform: translateY(-7px) scale(1.03);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.13);
+}
+
+.property-card img {
+  width: 210px;
+  height: 210px;
+  max-width: 90%;
   object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  border-radius: 10px;
+  margin: 28px auto 0 auto;
+  display: block;
   background: #e2e8f0;
 }
 
-.service-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+.property-info {
+  padding: 20px 18px 24px 18px;
+  width: 100%;
+  text-align: center;
 }
 
-.service-info h2 {
-  font-size: 1.6rem;
+.property-info h2 {
   color: #0e4a7b;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  font-size: 1.25rem;
   font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
-.service-info p {
-  font-size: 1.08rem;
-  color: #333;
-}
-
-.service-info ul {
+.property-info ul {
   list-style: none;
-  padding: 0;
-  margin: 0 0 10px 0;
+  padding-left: 0;
+  margin: 16px 0 10px 0;
 }
 
-.service-info li {
+.property-info li {
   margin-bottom: 7px;
   font-size: 1rem;
 }
 
-.quote-btn {
-  background: #1976d2;
-  color: #fff;
+button, .quote-btn {
+  background: #0e4a7b;
+  color: white;
   border: none;
-  padding: 12px 30px;
-  border-radius: 7px;
-  font-size: 1.09rem;
+  padding: 11px 24px;
+  border-radius: 6px;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  margin-top: 12px;
-  transition: background 0.18s, box-shadow 0.18s;
-  box-shadow: 0 2px 8px rgba(30,64,175,0.07);
+  margin-top: 8px;
+  transition: background 0.18s;
 }
 
-.quote-btn:hover {
-  background: #0e4a7b;
-  box-shadow: 0 4px 16px rgba(30,64,175,0.13);
+button:hover, .quote-btn:hover {
+  background: #08355b;
 }
 
 /* Footer */
 footer {
-  background: #1a2632;
+  background: #0e4a7b;
   color: #fff;
   text-align: center;
-  padding: 22px 8px;
-  font-size: 1.07rem;
+  padding: 20px;
+  font-size: 1rem;
   margin-top: auto;
-  border-top-left-radius: 13px;
-  border-top-right-radius: 13px;
-  letter-spacing: 0.2px;
-  box-shadow: 0 -2px 10px rgba(0,0,0,0.04);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+header {
+  background: linear-gradient(90deg, #0e4a7b 80%, #2563eb 100%);
+  color: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  padding: 0;
+  border-bottom: 2px solid #fff;
 }
 
-/* Responsive */
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 18px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo a {
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-size: 2.1rem;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+  display: block;
+}
+
+.logo a:hover {
+  color: #facc15;
+}
+
+.page-title {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 24px;
+  margin-right: auto;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.08rem;
+  padding: 8px 18px;
+  border-radius: 5px;
+  transition: background 0.18s, color 0.18s, transform 0.14s;
+  position: relative;
+  display: block;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  background: #facc15;
+  color: #0e4a7b;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 2px 8px rgba(250,204,21,0.10);
+}
+
 @media (max-width: 900px) {
-  .navbar {
+  .nav-container {
     flex-direction: column;
     align-items: stretch;
-    padding: 16px 5vw;
+    padding: 14px 5vw;
     gap: 10px;
   }
-  .logo {
-    font-size: 1.4rem;
-    margin-bottom: 8px;
+  .page-title {
+    margin: 10px 0;
     text-align: center;
+    font-size: 1.15rem;
   }
-  .navbar ul {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    align-items: flex-start;
+  .nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
   }
-  .service-card {
-    flex-direction: column;
-    align-items: center;
-    padding: 24px 8px;
-    gap: 18px;
-  }
-  .service-card img {
-    width: 100%;
-    max-width: 350px;
-    height: 140px;
+  .logo a {
+    font-size: 1.4rem;
+    text-align: center;
   }
 }
