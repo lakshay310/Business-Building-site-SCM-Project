@@ -127,27 +127,102 @@ footer {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
+header {
+  background: linear-gradient(90deg, #0e4a7b 80%, #2563eb 100%);
+  color: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  padding: 0;
+  border-bottom: 2px solid #fff;
+}
 
-/* Responsive Adjustments */
-@media (max-width: 700px) {
-  .properties-grid {
-    padding: 0 8px 30px 8px;
-    gap: 16px;
-    max-width: 98vw;
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 18px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo a {
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-size: 2.1rem;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+  display: block;
+}
+
+.logo a:hover {
+  color: #facc15;
+}
+
+.page-title {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 24px;
+  margin-right: auto;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.08rem;
+  padding: 8px 18px;
+  border-radius: 5px;
+  transition: background 0.18s, color 0.18s, transform 0.14s;
+  position: relative;
+  display: block;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  background: #facc15;
+  color: #0e4a7b;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 2px 8px rgba(250,204,21,0.10);
+}
+
+@media (max-width: 900px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 14px 5vw;
+    gap: 10px;
   }
-  .property-card img {
-    width: 120px;
-    height: 120px;
-    margin-top: 16px;
+  .page-title {
+    margin: 10px 0;
+    text-align: center;
+    font-size: 1.15rem;
   }
-  .property-info {
-    padding: 14px 8px 16px 8px;
+  .nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
   }
-  header {
-    padding: 16px 0 10px 0;
-  }
-  footer {
-    padding: 14px;
-    font-size: 0.97rem;
+  .logo a {
+    font-size: 1.4rem;
+    text-align: center;
   }
 }
