@@ -1,5 +1,5 @@
 body {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -7,57 +7,190 @@ body {
     color: #333;
 }
 
+/* Header Styles */
 header {
     display: flex;
-    justify-content: space-between; /* Align heading left, nav to the right */
-    align-items: center; /* Center vertically */
+    justify-content: space-between;
+    align-items: center;
     background-color: #0f172a;
     color: #fff;
-    padding: 15px 20px; /* Added padding to create space */
+    padding: 18px 32px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
 header .logo h1 {
     margin: 0;
+    font-size: 2rem;
+    letter-spacing: 2px;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .nav-links li {
-    margin: 0 10px;
+    margin: 0 12px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #fff;
-    transition: color 0.3s ease; /* Smooth transition for color change */
+    font-size: 1.1rem;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: color 0.3s, background 0.3s;
 }
 
+.nav-links a.active,
 .nav-links a:hover {
-    color: #ffcc00; /* Change to yellow on hover */
+    color: #0f172a;
+    background: #ffcc00;
 }
 
-section.about {
-    padding: 20px;
-    margin: 20px auto;
+/* Contact/About Section Styles */
+section.about,
+section.contact,
+section.contact-form-section,
+section.map-section {
+    padding: 28px 20px;
+    margin: 24px auto;
     max-width: 800px;
     background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
 }
 
-section.about h2 {
+section.about h2,
+section.contact h2,
+section.contact-form-section h3,
+section.map-section h3 {
     color: #0f172a;
     text-align: center;
+    margin-bottom: 16px;
+    font-size: 2rem;
+    letter-spacing: 1px;
 }
 
+/* Contact Details Grid */
+.contact-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 22px;
+    margin-bottom: 10px;
+}
+
+.contact-details-grid h3 {
+    margin: 0 0 6px 0;
+    color: #1976d2;
+    font-size: 1.1rem;
+}
+
+.contact-details-grid a, .contact-details-grid address {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    word-break: break-all;
+}
+
+.contact-details-grid a:hover {
+    color: #1976d2;
+    text-decoration: underline;
+}
+
+/* Contact Form Styles */
+.contact-form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.contact-form-section label {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.contact-form-section input,
+.contact-form-section textarea {
+    padding: 9px 10px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    font-size: 1rem;
+    background: #fafbfc;
+    transition: border-color 0.2s;
+}
+
+.contact-form-section input:focus,
+.contact-form-section textarea:focus {
+    outline: none;
+    border-color: #1976d2;
+    background: #fff;
+}
+
+.contact-form-section button[type="submit"] {
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    padding: 12px 0;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+}
+
+.contact-form-section button[type="submit"]:hover {
+    background: #125ea6;
+}
+
+/* Map Section */
+.map-section iframe {
+    width: 100%;
+    height: 250px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 12px;
+}
+
+/* Footer Styles */
 footer {
     text-align: center;
-    padding: 10px 0;
+    padding: 16px 0;
     background-color: #0f172a;
     color: #fff;
-    margin-top: 20px;
+    margin-top: 32px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px 12px;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .nav-links li {
+        margin: 6px 0;
+    }
+    section.about,
+    section.contact,
+    section.contact-form-section,
+    section.map-section {
+        padding: 16px 6px;
+        margin: 12px 0;
+        max-width: 98vw;
+    }
 }
