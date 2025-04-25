@@ -12,15 +12,10 @@ body {
 /* Navigation Bar */
 nav {
     background-color: #0f172a;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    border-radius: 8px;
-    z-index: 1000;
-    padding: 8px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end; /* Align nav links to the right */
+    padding: 0 40px;
 }
 
 .nav-links {
@@ -50,22 +45,6 @@ nav {
 .nav-links li a:hover {
     color: #0f172a;
     background: #facc15;
-}
-
-/* Responsive: Stack links vertically on small screens */
-@media (max-width: 600px) {
-    nav {
-        padding: 8px 8px;
-        right: 5px;
-        left: 5px;
-        bottom: 5px;
-    }
-    .nav-links {
-        gap: 5px;
-        font-size: 1rem;
-        flex-direction: column;
-        align-items: flex-end;
-    }
 }
 
 /* Header */
