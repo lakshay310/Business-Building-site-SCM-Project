@@ -1,67 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f9;
     color: #333;
 }
 
+/* Navigation Bar */
+nav {
+    background-color: #0f172a;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 8px;
+    z-index: 1000;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+    font-size: 1.15rem;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-links li a.active,
+.nav-links li a:hover {
+    color: #0f172a;
+    background: #facc15;
+}
+
+/* Responsive: Stack links vertically on small screens */
+@media (max-width: 600px) {
+    nav {
+        padding: 8px 8px;
+        right: 5px;
+        left: 5px;
+        bottom: 5px;
+    }
+    .nav-links {
+        gap: 5px;
+        font-size: 1rem;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+
+/* Header */
 header {
     background-color: #0f172a;
     color: white;
-    padding: 20px 0;
+    padding: 30px 0 20px 0;
     text-align: left;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding-left: 40px;
 }
 
+header h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Reviews Section */
 .reviews-container {
     max-width: 800px;
     margin: 30px auto;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* Aligns all review boxes to the right */
+    align-items: flex-start; /* Align reviews to the left */
 }
 
 .review {
-    background-color: white;
+    background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border: 2px solid #0f172a;
     padding: 20px;
     margin-bottom: 20px;
-    width: 70%; /* Adjust width as needed */
+    width: 70%;
     transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .review:hover {
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    border-color: #0f172a;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.13);
+    border-color: #facc15;
 }
 
 .review h2 {
     margin-top: 0;
-    color: #007BFF;
+    color: #0f172a;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
 }
 
 .date {
-    font-size: 0.9em;
+    font-size: 0.95em;
     color: #666;
     margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .rating {
     font-weight: bold;
-    color: #FFA500;
+    color: #facc15;
     margin-bottom: 10px;
+    font-size: 1.1em;
 }
 
 .comment {
-    font-size: 1em;
+    font-size: 1.07em;
     line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Responsive for smaller screens */
+/* Responsive Design */
+@media (max-width: 900px) {
+    .review {
+        width: 90%;
+    }
+    nav {
+        padding: 0 10px;
+    }
+    header {
+        padding-left: 10px;
+    }
+}
 @media (max-width: 600px) {
     .review {
         width: 100%;
@@ -69,4 +157,23 @@ header {
     .reviews-container {
         align-items: stretch;
     }
+    nav {
+        padding: 0 5px;
+    }
+    header {
+        padding: 20px 0 20px 5px;
+    }
+    .nav-links {
+        gap: 10px;
+        font-size: 1rem;
+    }
+}
+
+/* Footer (if needed) */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #0f172a;
+    color: #fff;
+    margin-top: 20px;
 }
