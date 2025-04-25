@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
-      background: #f7f7f7;
+      background: #f9fafb;
       margin: 0;
       padding: 0;
     }
@@ -15,8 +15,8 @@
     header {
       text-align: center;
       padding: 2.5rem 1rem 1.5rem 1rem;
-      background: #0f172a;
-      color: #fff;
+      background: #1e293b;
+      color: #ffffff;
     }
 
     header h1 {
@@ -27,33 +27,33 @@
     }
 
     header p {
-      font-size: 1.15rem;
-      color: #e2e8f0;
+      font-size: 1.1rem;
+      color: #cbd5e1;
     }
 
     .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 28px;
-      max-width: 1100px;
+      max-width: 1140px;
       margin: 40px auto 0 auto;
       padding: 0 20px 40px 20px;
     }
 
     .portfolio-item {
-      background: #fff;
+      background: #ffffff;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.09);
-      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
     .portfolio-item:hover {
-      transform: translateY(-7px) scale(1.03);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
     }
 
     .portfolio-item img {
@@ -64,33 +64,31 @@
     }
 
     .caption {
-      padding: 1rem 0.7rem;
+      padding: 1rem 0.75rem;
       text-align: center;
-      font-size: 1.08rem;
+      font-size: 1.05rem;
       color: #1e3a8a;
-      background: #f5f7fa;
+      background: #f1f5f9;
       width: 100%;
       box-sizing: border-box;
     }
 
-    /* Responsive adjustments */
+    /* Responsive tweaks */
     @media (max-width: 600px) {
       .portfolio-item img {
         height: 140px;
       }
-      .portfolio-grid {
-        gap: 14px;
-        padding: 0 4vw 30px 4vw;
+      .caption {
+        font-size: 0.95rem;
       }
     }
   </style>
-  <!-- Google Fonts for Bebas Neue -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <h1>Residential Sites Portfolio</h1>
-    <p>Our showcase of completed and ongoing residential projects.</p>
+    <p>A showcase of our completed and ongoing residential developments across North India.</p>
   </header>
   <main>
     <section class="portfolio-grid">
@@ -111,26 +109,25 @@
         <div class="caption">Eco-friendly Residence, Hilltop</div>
       </div>
       <div class="portfolio-item">
-        <img src="resedentialport5.jpeg" alt="Modern Villa, Chandigarh">
-        <div class="caption">Modern Villa, Chandigarh</div>
+        <img src="resedentialport5.jpeg" alt="Luxury Bungalow, Chandigarh">
+        <div class="caption">Luxury Bungalow, Chandigarh</div>
       </div>
       <div class="portfolio-item">
-        <img src="resedentialport6.jpeg" alt="Modern Villa, Mohali">
-        <div class="caption">Modern Villa, Chandigarh</div>
+        <img src="resedentialport6.jpeg" alt="Contemporary Home, Mohali">
+        <div class="caption">Contemporary Home, Mohali</div>
       </div>
       <div class="portfolio-item">
-        <img src="resedentialport7.jpeg" alt="Modern Villa, Kharar">
-        <div class="caption">Modern Villa, Kharar</div>
+        <img src="resedentialport7.jpeg" alt="Urban Residence, Kharar">
+        <div class="caption">Urban Residence, Kharar</div>
       </div>
       <div class="portfolio-item">
-        <img src="resedentialport8.jpeg" alt="Modern Villa, Patiala">
-        <div class="caption">Modern Villa, Patiala</div>
+        <img src="resedentialport8.jpeg" alt="Modern Duplex, Patiala">
+        <div class="caption">Modern Duplex, Patiala</div>
       </div>
       <div class="portfolio-item">
-        <img src="resedentialport9.jpeg" alt="Modern Villa, Jalandhar">
-        <div class="caption">Modern Villa, Jalandhar</div>
+        <img src="resedentialport9.jpeg" alt="Elegant Villa, Jalandhar">
+        <div class="caption">Elegant Villa, Jalandhar</div>
       </div>
-      <!-- Add more portfolio-item blocks as needed -->
     </section>
   </main>
 </body>
