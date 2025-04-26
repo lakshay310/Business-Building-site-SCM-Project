@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Residential Sites Portfolio</title>
+  <title>Residential Sites Portfolio - Chandigarh</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
   <style>
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
@@ -14,15 +17,34 @@
 
     header {
       text-align: center;
-      padding: 2.5rem 1rem 1.5rem 1rem;
+      padding: 2rem 1rem 1rem 1rem;
       background: #1e293b;
       color: #ffffff;
     }
 
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #facc15;
+    }
+
     header h1 {
       font-family: 'Bebas Neue', cursive, Arial, sans-serif;
-      font-size: 2.7rem;
-      margin-bottom: 0.4rem;
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
       letter-spacing: 1px;
     }
 
@@ -33,10 +55,10 @@
 
     .portfolio-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 28px;
-      max-width: 1140px;
-      margin: 40px auto 0 auto;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 40px auto;
       padding: 0 20px 40px 20px;
     }
 
@@ -58,77 +80,78 @@
 
     .portfolio-item img {
       width: 100%;
-      height: 210px;
+      height: 220px;
       object-fit: cover;
       display: block;
+      background: #e2e8f0;
     }
 
     .caption {
       padding: 1rem 0.75rem;
       text-align: center;
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       color: #1e3a8a;
       background: #f1f5f9;
       width: 100%;
       box-sizing: border-box;
     }
 
-    /* Responsive tweaks */
     @media (max-width: 600px) {
       .portfolio-item img {
         height: 140px;
       }
       .caption {
-        font-size: 0.95rem;
+        font-size: 1rem;
+      }
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
       }
     }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <header>
-    <h1>Residential Sites Portfolio</h1>
-    <p>A showcase of our completed and ongoing residential developments across North India.</p>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="portfoliocommercial.html">Commercial Sites</a>
+      <a href="portfolioresedential.html" style="color: #facc15;">Residential Sites</a>
+      <a href="portfolioindustrial.html">Industrial Sites</a>
+    </nav>
+    <h1>Chandigarh Residential Sites Portfolio</h1>
+    <p>Showcasing premium residential projects in Chandigarh, Mohali, Zirakpur, and Panchkula.</p>
   </header>
+
   <main>
     <section class="portfolio-grid">
       <div class="portfolio-item">
-        <img src="resedentialport1.jpeg" alt="Modern Villa, Greenfield">
-        <div class="caption">Modern Villa, Greenfield</div>
+        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" alt="Luxury Villas, Sector 8, Chandigarh">
+        <div class="caption">Luxury Villas, Sector 8, Chandigarh</div>
       </div>
       <div class="portfolio-item">
-        <img src="resedentialport2.jpeg" alt="Luxury Apartments, Downtown">
-        <div class="caption">Luxury Apartments, Downtown</div>
+        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80" alt="Modern Apartments, Sector 35, Chandigarh">
+        <div class="caption">Modern Apartments, Sector 35, Chandigarh</div>
       </div>
       <div class="portfolio-item">
-        <img src="resedentialport3.jpeg" alt="Family Home, Lakeside">
-        <div class="caption">Family Home, Lakeside</div>
+        <img src="https://imagecdn.99acres.com/media1/28228/12/564572401M-1737935880852.webp" alt="Family Homes, Mohali Phase 3">
+        <div class="caption">Family Homes, Mohali Phase 3</div>
       </div>
       <div class="portfolio-item">
-        <img src="resedentialport4.jpg" alt="Eco-friendly Residence, Hilltop">
-        <div class="caption">Eco-friendly Residence, Hilltop</div>
+        <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=800&q=80" alt="Urban Living, Zirakpur Heights">
+        <div class="caption">Urban Living, Zirakpur Heights</div>
       </div>
       <div class="portfolio-item">
-        <img src="resedentialport5.jpeg" alt="Luxury Bungalow, Chandigarh">
-        <div class="caption">Luxury Bungalow, Chandigarh</div>
+        <img src="https://housing-images.n7net.in/4f2250e8/78807a2a4449fa870ed987d020b8847f/v0/large/dlf_valley-sector_3_budanpur-panchkula-dlf.jpeg" alt="Eco Residences, Panchkula Sector 20">
+        <div class="caption">Eco Residences, Panchkula Sector 20</div>
       </div>
       <div class="portfolio-item">
-        <img src="resedentialport6.jpeg" alt="Contemporary Home, Mohali">
-        <div class="caption">Contemporary Home, Mohali</div>
-      </div>
-      <div class="portfolio-item">
-        <img src="resedentialport7.jpeg" alt="Urban Residence, Kharar">
-        <div class="caption">Urban Residence, Kharar</div>
-      </div>
-      <div class="portfolio-item">
-        <img src="resedentialport8.jpeg" alt="Modern Duplex, Patiala">
-        <div class="caption">Modern Duplex, Patiala</div>
-      </div>
-      <div class="portfolio-item">
-        <img src="resedentialport9.jpeg" alt="Elegant Villa, Jalandhar">
-        <div class="caption">Elegant Villa, Jalandhar</div>
+        <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=800&q=80" alt="Elegant Villas, Sector 5, Panchkula">
+        <div class="caption">Elegant Villas, Sector 5, Panchkula</div>
       </div>
     </section>
+    
+    
   </main>
 </body>
 </html>

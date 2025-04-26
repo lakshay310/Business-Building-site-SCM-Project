@@ -9,156 +9,104 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   
   <style>
-    :root {
-      --primary-color: #0f172a;
-      --secondary-color: #1e3a8a;
-      --background-color: #f4f6f8;
-      --card-background: #ffffff;
-      --caption-background: #f9fafb;
-      --text-color: #333;
-      --subtext-color: #cbd5e1;
-      --highlight-color: #facc15;
-      --box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
-      --box-shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.12);
-      --border-radius: 14px;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
-      background-color: var(--background-color);
-      color: var(--text-color);
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+      background: #f9fafb;
+      margin: 0;
+      padding: 0;
     }
 
     header {
-      background-color: var(--primary-color);
-      color: #fff;
       text-align: center;
-      padding: 1rem 1rem 0.5rem;
+      padding: 2rem 1rem 1rem 1rem;
+      background: #1e293b;
+      color: #ffffff;
     }
 
     nav {
       display: flex;
       justify-content: center;
+      gap: 1.5rem;
       margin-bottom: 1rem;
     }
 
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .nav-links li a {
-      color: var(--subtext-color);
+    nav a {
+      color: #cbd5e1;
       text-decoration: none;
       font-size: 1.1rem;
       font-weight: 500;
-      padding: 6px 12px;
-      border-radius: 6px;
-      transition: all 0.3s ease;
+      transition: color 0.3s ease;
     }
 
-    .nav-links li a:hover{
-      color: var(--primary-color);
-      background-color: var(--highlight-color);
+    nav a:hover {
+      color: #facc15;
     }
 
     header h1 {
       font-family: 'Bebas Neue', cursive, Arial, sans-serif;
-      font-size: 3rem;
-      margin-bottom: 0.3rem;
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
       letter-spacing: 1px;
     }
 
     header p {
       font-size: 1.1rem;
-      color: var(--subtext-color);
-      margin-bottom: 1.5rem;
-    }
-
-    main {
-      flex: 1;
+      color: #cbd5e1;
     }
 
     .portfolio-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 28px;
-      max-width: 1100px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
       margin: 40px auto;
-      padding: 0 20px 60px;
+      padding: 0 20px 40px 20px;
     }
 
     .portfolio-item {
-      background-color: var(--card-background);
-      border-radius: var(--border-radius);
+      background: #ffffff;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: var(--box-shadow);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
-      cursor: pointer;
     }
 
     .portfolio-item:hover {
-      transform: translateY(-7px) scale(1.02);
-      box-shadow: var(--box-shadow-hover);
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
     }
 
     .portfolio-item img {
       width: 100%;
-      height: 180px;
+      height: 220px;
       object-fit: cover;
-      background: #e0e7ef;
       display: block;
-      transition: transform 0.3s ease;
-    }
-
-    .portfolio-item:hover img {
-      transform: scale(1.03);
+      background: #e2e8f0;
     }
 
     .caption {
-      padding: 1rem;
+      padding: 1rem 0.75rem;
       text-align: center;
       font-size: 1.1rem;
-      color: var(--secondary-color);
-      background: var(--caption-background);
+      color: #1e3a8a;
+      background: #f1f5f9;
       width: 100%;
-      font-weight: 500;
+      box-sizing: border-box;
     }
 
     @media (max-width: 600px) {
       .portfolio-item img {
-        height: 120px;
+        height: 140px;
       }
-      .portfolio-grid {
-        padding: 0 4vw 30px 4vw;
-        gap: 18px;
-      }
-      header h1 {
-        font-size: 2.4rem;
-      }
-      header p {
+      .caption {
         font-size: 1rem;
       }
-      .nav-links {
-        gap: 1rem;
-      }
-      .nav-links li a {
-        font-size: 1rem;
-        padding: 5px 10px;
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
       }
     }
   </style>
@@ -167,9 +115,10 @@
 <body>
   <header>
     <nav>
-      <ul class="nav-links">
-        <li><a href="home.html" class="active">Home</a></li>
-      </ul>
+      <a href="home.html">Home</a>
+      <a href="portfoliocommercial.html">Commercial Sites</a>
+      <a href="portfolioresedential.html" style="color: #facc15;">Residential Sites</a>
+      <a href="portfolioindustrial.html">Industrial Sites</a>
     </nav>
     <h1>Chandigarh Commercial Sites Portfolio</h1>
     <p>Showcasing top commercial development projects in and around Chandigarh.</p>
