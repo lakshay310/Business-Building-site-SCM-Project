@@ -4,31 +4,83 @@
   <meta charset="UTF-8">
   <title>Chandigarh Commercial Sites Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  
   <style>
+    :root {
+      --primary-color: #0f172a;
+      --secondary-color: #1e3a8a;
+      --background-color: #f4f6f8;
+      --card-background: #ffffff;
+      --caption-background: #f9fafb;
+      --text-color: #333;
+      --subtext-color: #cbd5e1;
+      --box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+      --box-shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.12);
+      --border-radius: 14px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
-      background: #f4f6f8;
-      color: #333;
+      background-color: var(--background-color);
+      color: var(--text-color);
       line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
+
     header {
-      background-color: #0f172a;
+      background-color: var(--primary-color);
       color: #fff;
       text-align: center;
-      padding: 2.5rem 1rem 1.5rem;
+      padding: 1rem 1rem 0.5rem;
     }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
     header h1 {
       font-family: 'Bebas Neue', cursive, Arial, sans-serif;
-      font-size: 2.8rem;
-      margin-bottom: 0.4rem;
+      font-size: 3rem;
+      margin-bottom: 0.3rem;
       letter-spacing: 1px;
     }
+
     header p {
       font-size: 1.1rem;
-      color: #cbd5e1;
+      color: var(--subtext-color);
+      margin-bottom: 1.5rem;
     }
+
+    main {
+      flex: 1;
+    }
+
     .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -37,35 +89,47 @@
       margin: 40px auto;
       padding: 0 20px 60px;
     }
+
     .portfolio-item {
-      background-color: #fff;
-      border-radius: 14px;
+      background-color: var(--card-background);
+      border-radius: var(--border-radius);
       overflow: hidden;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: var(--box-shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
+      cursor: pointer;
     }
+
     .portfolio-item:hover {
       transform: translateY(-7px) scale(1.02);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+      box-shadow: var(--box-shadow-hover);
     }
+
     .portfolio-item img {
       width: 100%;
       height: 180px;
       object-fit: cover;
-      display: block;
       background: #e0e7ef;
+      display: block;
+      transition: transform 0.3s ease;
     }
+
+    .portfolio-item:hover img {
+      transform: scale(1.03);
+    }
+
     .caption {
       padding: 1rem;
       text-align: center;
       font-size: 1.1rem;
-      color: #1e3a8a;
-      background: #f9fafb;
+      color: var(--secondary-color);
+      background: var(--caption-background);
       width: 100%;
+      font-weight: 500;
     }
+
     @media (max-width: 600px) {
       .portfolio-item img {
         height: 120px;
@@ -74,40 +138,62 @@
         padding: 0 4vw 30px 4vw;
         gap: 18px;
       }
+      header h1 {
+        font-size: 2.4rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      nav a {
+        margin: 0 0.5rem;
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
+
 <body>
   <header>
+    <nav>
+      <a href="home.html">Home</a>
+    </nav>
     <h1>Chandigarh Commercial Sites Portfolio</h1>
     <p>Showcasing top commercial development projects in and around Chandigarh.</p>
   </header>
+
   <main>
     <section class="portfolio-grid">
+      
       <div class="portfolio-item">
         <img src="header-img-brands-in-elante-mall-chandigarh.jpg" alt="Elante Mall, Chandigarh" loading="lazy">
         <div class="caption">Elante Mall, Chandigarh</div>
       </div>
+
       <div class="portfolio-item">
         <img src="images (1).jpeg" alt="Godrej Eternia, Industrial Area Phase 1" loading="lazy">
         <div class="caption">Godrej Eternia, Industrial Area Phase 1</div>
       </div>
+
       <div class="portfolio-item">
         <img src="images (2).jpeg" alt="Maya Garden Magnesia, Zirakpur" loading="lazy">
         <div class="caption">Maya Garden Magnesia, Zirakpur</div>
       </div>
+
       <div class="portfolio-item">
         <img src="ak_812_2055069660-1716290990_700x700.jpeg" alt="Curo One, New Chandigarh" loading="lazy">
         <div class="caption">Curo One, New Chandigarh</div>
       </div>
+
       <div class="portfolio-item">
         <img src="images (3).jpeg" alt="Jubilee Walk, Mohali" loading="lazy">
         <div class="caption">Jubilee Walk, Mohali</div>
       </div>
+
       <div class="portfolio-item">
         <img src="images (4).jpeg" alt="Beacon Street, New Chandigarh" loading="lazy">
         <div class="caption">Beacon Street, New Chandigarh</div>
       </div>
+
     </section>
   </main>
 </body>
