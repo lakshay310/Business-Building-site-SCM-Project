@@ -17,6 +17,7 @@
       --caption-background: #f9fafb;
       --text-color: #333;
       --subtext-color: #cbd5e1;
+      --highlight-color: #facc15;
       --box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
       --box-shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.12);
       --border-radius: 14px;
@@ -51,17 +52,25 @@
       margin-bottom: 1rem;
     }
 
-    nav a {
-      color: #cbd5e1;
-      text-decoration: none;
-      margin: 0 1rem;
-      font-size: 1.1rem;
-      transition: color 0.3s ease;
-      font-weight: 500;
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
     }
 
-    nav a:hover {
-      color: #ffffff;
+    .nav-links li a {
+      color: var(--subtext-color);
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-links li a:hover{
+      color: var(--primary-color);
+      background-color: var(--highlight-color);
     }
 
     header h1 {
@@ -144,9 +153,12 @@
       header p {
         font-size: 1rem;
       }
-      nav a {
-        margin: 0 0.5rem;
+      .nav-links {
+        gap: 1rem;
+      }
+      .nav-links li a {
         font-size: 1rem;
+        padding: 5px 10px;
       }
     }
   </style>
@@ -155,7 +167,9 @@
 <body>
   <header>
     <nav>
-      <a href="home.html">Home</a>
+      <ul class="nav-links">
+        <li><a href="home.html" class="active">Home</a></li>
+      </ul>
     </nav>
     <h1>Chandigarh Commercial Sites Portfolio</h1>
     <p>Showcasing top commercial development projects in and around Chandigarh.</p>
