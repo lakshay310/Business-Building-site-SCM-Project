@@ -156,3 +156,94 @@ footer {
   position: relative;
   z-index: 2;
 }
+
+/* ------------------ Responsive Styles ------------------ */
+
+/* Tablets */
+@media (max-width: 992px) {
+  header {
+    padding: 20px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .properties-grid {
+    gap: 24px;
+    padding: 0 16px 40px 16px;
+  }
+
+  .property-card img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .property-info h2 {
+    font-size: 1.1rem;
+  }
+
+  button, .quote-btn {
+    padding: 10px 22px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+    gap: 12px;
+  }
+
+  .properties-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .property-card img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .property-info h2 {
+    font-size: 1rem;
+  }
+
+  .property-info li {
+    font-size: 0.95rem;
+  }
+
+  button, .quote-btn {
+    width: 80%;
+    max-width: 300px;
+    margin: 10px auto 0 auto;
+    display: block;
+  }
+}
+
+/* Small Devices */
+@media (max-width: 480px) {
+  .logo h1 {
+    font-size: 2rem;
+  }
+
+  .property-card img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .property-info h2 {
+    font-size: 0.95rem;
+  }
+
+  .property-info li {
+    font-size: 0.9rem;
+  }
+}
