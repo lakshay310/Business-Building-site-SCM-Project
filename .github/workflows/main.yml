@@ -1,0 +1,26 @@
+project:
+  name: "BUILDT Construction"
+  description: "A simple, interactive, and user-friendly construction services website built using HTML, CSS, and GitHub Pages."
+  technologies:
+    - HTML
+    - CSS
+    - GitHub Pages
+  features:
+    - Easy to navigate
+    - Visually appealing interface
+    - Responsive design
+    - Hosted using GitHub Pages
+  usage:
+    instructions:
+      - Clone the repository from GitHub
+      - Open `index.html` in your browser
+      - Explore the interactive sections
+  authors:
+    - name: "Lakshay Jain"
+      role: "HTML and CSS Developers"
+    - name: "Jashan Devgan"
+      role: "HTML and CSS Developers"
+    - name: "Harkirat Singh"
+      role: "Project Coordinator"
+  repository: "https://github.com/lakshay310/Business-Building-site-SCM-Project.git"
+  license: "MIT"
