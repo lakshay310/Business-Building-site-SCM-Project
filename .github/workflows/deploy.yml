@@ -3,31 +3,31 @@ name: Deploy Business Website to GitHub Pages
 on:
   push:
     branches:
-      - main  # Trigger deployment when pushing to the main branch
+      - main
 
 permissions:
-  contents: read        # Required to read the repository contents
-  pages: write          # Required to deploy to GitHub Pages
-  id-token: write       # Required for OIDC authentication with Pages
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}  # Optional: Displays the deployed URL in the workflow UI
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout source code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup GitHub Pages
+      - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Upload website files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'  # Set this to '.' if your HTML/CSS/JS files are in the root directory
+          path: '.'  # Change if your files are in a subfolder
 
       - name: Deploy to GitHub Pages
         id: deployment
